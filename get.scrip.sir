@@ -17,11 +17,11 @@ echo "This use for good"
 echo "This use for target"
 echo "This use for cybersecurity"
 echo "This use for phishing"
-echo "This use for aaayafuj"
+echo "This use for aaayafuj_69_Net"
 echo -e "${RESET}"
 sleep 2
 
-echo -e "${GREEN}[+] Starting 69phisher Installation...${RESET}"
+echo -e "${GREEN}[+] Starting aaayafuj_69_Net Installation...${RESET}"
 sleep 2
 
 # Function to check and install missing packages
@@ -61,18 +61,18 @@ update_system() {
     sudo apt update -y && sudo apt upgrade -y
 }
 
-# Clone and setup 69phisher
-install_69phisher() {
-    echo -e "${YELLOW}[+] Cloning 69phisher repository...${RESET}"
+# Clone and setup aaayafuj_69_Net
+install_aaayafuj_69_Net() {
+    echo -e "${YELLOW}[+] Cloning aaayafuj_69_Net repository...${RESET}"
     if git clone https://github.com/Akshay-Arjun/69phisher.git; then
-        echo -e "${GREEN}[+] 69phisher cloned successfully!${RESET}"
+        echo -e "${GREEN}[+] aaayafuj_69_Net cloned successfully!${RESET}"
     else
-        echo -e "${RED}[-] Failed to clone 69phisher. Retrying...${RESET}"
+        echo -e "${RED}[-] Failed to clone aaayafuj_69_Net. Retrying...${RESET}"
         sleep 2
-        install_69phisher
+        install_aaayafuj_69_Net
     fi
 
-    cd 69phisher || { echo -e "${RED}[-] Failed to enter 69phisher directory! Exiting...${RESET}"; exit 1; }
+    cd 69phisher || { echo -e "${RED}[-] Failed to enter aaayafuj_69_Net directory! Exiting...${RESET}"; exit 1; }
 
     echo -e "${YELLOW}[+] Setting executable permissions...${RESET}"
     chmod 777 69phisher.sh
@@ -80,7 +80,7 @@ install_69phisher() {
     echo -e "${YELLOW}[+] Installing additional Python libraries...${RESET}"
     pip3 install requests colorama rich pyfiglet
 
-    echo -e "${GREEN}[+] Running 69phisher...${RESET}"
+    echo -e "${GREEN}[+] Running aaayafuj_69_Net...${RESET}"
     bash 69phisher.sh
 }
 
@@ -98,4 +98,4 @@ security_warning
 detect_os
 update_system
 install_packages
-install_69phisher
+install_aaayafuj_69_Net
