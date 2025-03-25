@@ -1,0 +1,610 @@
+
+1)
+nmap -sS -p 1-65389
+nmap -sS --top-ports 100
+nmap -sS --min-rate
+nmap -sS --max-rate
+nmap -sS --scan-delay
+nmap -sS --max-retries
+nmap -sS -T4
+nmap -sS -Pn
+nmap -sS --open
+nmap --min-parallelism $TARGET
+nmap --max-parallelism $TARGET
+nmap --randomize-hosts $TARGET
+nmap --spoof-mac $TARGET
+nmap --data-length $TARGET
+nmap --disable-arp-ping $TARGET
+nmap --send-ip $TARGET
+nmap --send-eth $TARGET
+nmap --dns-servers $TARGET
+nmap --script-updatedb $TARGET
+nmap --unprivileged $TARGET
+nmap --packet-trace $TARGET
+nmap --host-timeout $TARGET
+nmap -iL <file> $TARGET
+nmap --datadir $TARGET
+nmap --reason $TARGET
+nmap -p- $TARGET
+nmap -T4 $TARGET
+nmap --exclude $TARGET
+nmap -A $TARGET
+nmap -A --disable-arp-ping
+nmap -A --spoof-mac
+nmap -A --max-retries 0
+nmap -sS -p 1-65389 --scan-delay 0
+nmap -sS -p 1-65389 --max-rate 1000000
+nmap -sS -p 1-65389 --spoof-mac
+nmap -sS -p 1-65389 --randomize-hosts
+
+
+2)
+nmap -A
+nmap -A -T4
+nmap -A --traceroute
+nmap -A --script
+nmap -A --osscan-guess
+nmap -A -v
+nmap -A -p
+nmap -A -oN
+nmap -A --reason
+nmap -A --host-timeout
+nmap --zero-flag $TARGET
+nmap --track-spoof $TARGET
+nmap --vulnerable-scan $TARGET
+nmap --error-forced $TARGET
+nmap -scan-debug $TARGET
+nmap --time-to-live $TARGET
+nmap --repeat-scan $TARGET
+nmap --no-prompt $TARGET
+nmap --disable-response-check $TARGET
+nmap --silent-response $TARGET
+nmap -reset-scan $TARGET
+nmap --paranoid $TARGET
+nmap -intrusion-test $TARGET
+nmap -sS $TARGET
+nmap -sT $TARGET
+nmap -sU $TARGET
+nmap -sX $TARGET
+nmap -sF $TARGET
+nmap -sN $TARGET
+nmap -O $TARGET
+nmap -A $TARGET
+nmap -p $TARGET
+nmap -p- $TARGET
+nmap -p 1-65535 $TARGET
+nmap -v $TARGET
+nmap -T4 $TARGET
+nmap -T5 $TARGET
+nmap -iL $TARGET
+nmap -iR $TARGET
+nmap -n $TARGET
+nmap -Pn $TARGET
+nmap -D $TARGET
+nmap -S $TARGET
+nmap --source-port $TARGET
+nmap --badsum $TARGET
+nmap -P0 $TARGET
+nmap -v $TARGET
+nmap --open $TARGET
+nmap --traceroute $TARGET
+nmap --reason $TARGET
+nmap -sV $TARGET
+nmap --script $TARGET
+nmap -O $TARGET
+nmap -sU -p 1-65389 --scan-delay 0
+nmap -sU -p 1-65389 --spoof-mac
+nmap -sU -p 1-65389 --randomize-hosts
+nmap -sU -p 1-65389
+nmap -sU --top-ports 100
+nmap -sU --min-rate
+nmap -sU --max-rate
+nmap -sU --scan-delay
+nmap -sU --max-retries
+nmap -sU --open
+nmap -sU -T4
+
+3)
+nmap -p 1-65389 $TARGET
+nmap -sS -p 1-65389 $TARGET
+nmap -nP -p 1-65389 $TARGET
+nmap -sV -p 1-65389 $TARGET
+nmap -f $TARGET
+nmap --fake $TARGET
+nmap --spoof-port $TARGET
+nmap --bogus $TARGET
+nmap --none $TARGET
+nmap --subnet-scan $TARGET
+nmap --no-flag $TARGET
+nmap -Q $TARGET
+nmap -ZZ $TARGET
+nmap --invalid-scan $TARGET
+nmap -X@ $TARGET
+nmap --no-port-scan $TARGET
+nmap --attack-mode $TARGET
+nmap -__spoof $TARGET
+nmap --undetectable $TARGET
+nmap -fake-scan $TARGET
+nmap --malicious $TARGET
+nmap --hidden $TARGET
+nmap --silent-scan $TARGET
+nmap -no-ping $TARGET
+nmap --attack-mode $TARGET
+nmap -scan-aggressive $TARGET
+nmap --disable-arp-scan $TARGET
+nmap --hack $TARGET
+nmap -no-send $TARGET
+nmap --auto-exploit $TARGET
+nmap -use-scripting $TARGET
+nmap --onion-scan $TARGET
+nmap --advanced-scan $TARGET
+nmap -flood $TARGET
+nmap --skip-checks $TARGET
+nmap -stealth $TARGET
+nmap --exploit-mode $TARGET
+nmap --hijack $TARGET
+nmap --remote-scan $TARGET
+nmap -fake-ip $TARGET
+nmap --silent-scan $TARGET
+nmap --bypass-filters $TARGET
+nmap -flood-attack $TARGET
+nmap --deep-scan $TARGET
+nmap --anonymize $TARGET
+nmap -skip-errors $TARGET
+nmap --zero-flag $TARGET
+nmap --track-spoof $TARGET
+nmap --vulnerable-scan $TARGET
+nmap --error-forced $TARGET
+nmap -scan-debug $TARGET
+nmap --time-to-live $TARGET
+nmap --repeat-scan $TARGET
+nmap --no-prompt $TARGET
+nmap --disable-response-check $TARGET
+nmap --silent-response $TARGET
+nmap -reset-scan $TARGET
+nmap --paranoid $TARGET
+nmap -intrusion-test $TARGET
+nmap -sS $TARGET
+nmap -sT $TARGET
+nmap -sU $TARGET
+nmap -sX $TARGET
+nmap -sF $TARGET
+nmap -sN $TARGET
+nmap -O $TARGET
+nmap -A $TARGET
+nmap -p $TARGET
+nmap -sF --spoof-mac
+nmap -sF -p 1-65389 --scan-delay 0
+nmap -sF --max-retries 0
+nmap -sF
+nmap -sF -p
+nmap -sF --open
+nmap -sF --reason
+nmap -sF -T4
+nmap -sF -Pn
+
+
+4)
+nmap -p 1-65389 $TARGET
+nmap -sS -p 1-65389 $TARGET
+nmap -nP -p 1-65389 $TARGET
+nmap -sV -p 1-65389 $TARGET
+nmap -f $TARGET
+nmap --fake $TARGET
+nmap --spoof-port $TARGET
+nmap --bogus $TARGET
+nmap --none $TARGET
+nmap --subnet-scan $TARGET
+nmap --no-flag $TARGET
+nmap -Q $TARGET
+nmap -ZZ $TARGET
+nmap --invalid-scan $TARGET
+nmap -X@ $TARGET
+nmap --no-port-scan $TARGET
+nmap --attack-mode $TARGET
+nmap -__spoof $TARGET
+nmap --undetectable $TARGET
+nmap -fake-scan $TARGET
+nmap --malicious $TARGET
+nmap --hidden $TARGET
+nmap --silent-scan $TARGET
+nmap -no-ping $TARGET
+nmap --attack-mode $TARGET
+nmap -scan-aggressive $TARGET
+nmap --disable-arp-scan $TARGET
+nmap --hack $TARGET
+nmap -no-send $TARGET
+nmap --auto-exploit $TARGET
+nmap -use-scripting $TARGET
+nmap --onion-scan $TARGET
+nmap --advanced-scan $TARGET
+nmap -flood $TARGET
+nmap --skip-checks $TARGET
+nmap -stealth $TARGET
+nmap --exploit-mode $TARGET
+nmap --hijack $TARGET
+nmap --remote-scan $TARGET
+nmap -fake-ip $TARGET
+nmap --silent-scan $TARGET
+nmap --bypass-filters $TARGET
+nmap -flood-attack $TARGET
+nmap --deep-scan $TARGET
+nmap --anonymize $TARGET
+nmap -skip-errors $TARGET
+nmap --zero-flag $TARGET
+nmap --track-spoof $TARGET
+nmap --vulnerable-scan $TARGET
+nmap --error-forced $TARGET
+nmap -scan-debug $TARGET
+nmap --time-to-live $TARGET
+nmap --repeat-scan $TARGET
+nmap --no-prompt $TARGET
+nmap --disable-response-check $TARGET
+nmap --silent-response $TARGET
+nmap -reset-scan $TARGET
+nmap --paranoid $TARGET
+nmap -intrusion-test $TARGET
+nmap -sS $TARGET
+nmap -sT $TARGET
+nmap -sU $TARGET
+nmap -sX $TARGET
+nmap -sF $TARGET
+nmap -sN $TARGET
+nmap -O $TARGET
+nmap -A $TARGET
+nmap -p $TARGET
+nmap -sN --spoof-mac
+nmap -sN -p 1-65389 --scan-delay 0
+nmap -sN --max-retries 0
+nmap -sN
+nmap -sN -p
+nmap -sN --open
+nmap -sN --reason
+nmap -sN -T4
+nmap -sN -Pn
+
+5)
+nmap -p 1-65389 $TARGET
+nmap -sS -p 1-65389 $TARGET
+nmap -nP -p 1-65389 $TARGET
+nmap -sV -p 1-65389 $TARGET
+nmap -f $TARGET
+nmap --fake $TARGET
+nmap --spoof-port $TARGET
+nmap --bogus $TARGET
+nmap --none $TARGET
+nmap --subnet-scan $TARGET
+nmap --no-flag $TARGET
+nmap -Q $TARGET
+nmap -ZZ $TARGET
+nmap --invalid-scan $TARGET
+nmap -X@ $TARGET
+nmap --no-port-scan $TARGET
+nmap --attack-mode $TARGET
+nmap -__spoof $TARGET
+nmap --undetectable $TARGET
+nmap -fake-scan $TARGET
+nmap --malicious $TARGET
+nmap --hidden $TARGET
+nmap --silent-scan $TARGET
+nmap -no-ping $TARGET
+nmap --attack-mode $TARGET
+nmap -scan-aggressive $TARGET
+nmap --disable-arp-scan $TARGET
+nmap --hack $TARGET
+nmap -no-send $TARGET
+nmap --auto-exploit $TARGET
+nmap -use-scripting $TARGET
+nmap --onion-scan $TARGET
+nmap --advanced-scan $TARGET
+nmap -flood $TARGET
+nmap --skip-checks $TARGET
+nmap -stealth $TARGET
+nmap --exploit-mode $TARGET
+nmap --hijack $TARGET
+nmap --remote-scan $TARGET
+nmap -fake-ip $TARGET
+nmap --silent-scan $TARGET
+nmap --bypass-filters $TARGET
+nmap -flood-attack $TARGET
+nmap --deep-scan $TARGET
+nmap --anonymize $TARGET
+nmap -skip-errors $TARGET
+nmap --zero-flag $TARGET
+nmap --track-spoof $TARGET
+nmap --vulnerable-scan $TARGET
+nmap --error-forced $TARGET
+nmap -scan-debug $TARGET
+nmap --time-to-live $TARGET
+nmap --repeat-scan $TARGET
+nmap --no-prompt $TARGET
+nmap --disable-response-check $TARGET
+nmap --silent-response $TARGET
+nmap -reset-scan $TARGET
+nmap --paranoid $TARGET
+nmap -intrusion-test $TARGET
+nmap -sS $TARGET
+nmap -sT $TARGET
+nmap -sU $TARGET
+nmap -sX $TARGET
+nmap -sF $TARGET
+nmap -sN $TARGET
+nmap -O $TARGET
+nmap -A $TARGET
+nmap -p $TARGET
+nmap -sV --spoof-mac
+nmap -sV -p 1-65389 --scan-delay 0
+nmap -sV --max-retries 0
+nmap -sV
+nmap -sV --version-all
+nmap -sV --version-intensity
+nmap -sV -p
+nmap -sV --osscan-guess
+nmap -sV --reason
+nmap -sV -T4
+nmap -sV --open
+
+
+6)
+nmap -p 1-65389 $TARGET
+nmap -sS -p 1-65389 $TARGET
+nmap -nP -p 1-65389 $TARGET
+nmap -sV -p 1-65389 $TARGET
+nmap -f $TARGET
+nmap --fake $TARGET
+nmap --spoof-port $TARGET
+nmap --bogus $TARGET
+nmap --none $TARGET
+nmap --subnet-scan $TARGET
+nmap --no-flag $TARGET
+nmap -Q $TARGET
+nmap -ZZ $TARGET
+nmap --invalid-scan $TARGET
+nmap -X@ $TARGET
+nmap --no-port-scan $TARGET
+nmap --attack-mode $TARGET
+nmap -__spoof $TARGET
+nmap --undetectable $TARGET
+nmap -fake-scan $TARGET
+nmap --malicious $TARGET
+nmap --hidden $TARGET
+nmap --silent-scan $TARGET
+nmap -no-ping $TARGET
+nmap --attack-mode $TARGET
+nmap -scan-aggressive $TARGET
+nmap --disable-arp-scan $TARGET
+nmap --hack $TARGET
+nmap -no-send $TARGET
+nmap --auto-exploit $TARGET
+nmap -use-scripting $TARGET
+nmap --onion-scan $TARGET
+nmap --advanced-scan $TARGET
+nmap -flood $TARGET
+nmap --skip-checks $TARGET
+nmap -stealth $TARGET
+nmap --exploit-mode $TARGET
+nmap --hijack $TARGET
+nmap --remote-scan $TARGET
+nmap -fake-ip $TARGET
+nmap --silent-scan $TARGET
+nmap --bypass-filters $TARGET
+nmap -flood-attack $TARGET
+nmap --deep-scan $TARGET
+nmap --anonymize $TARGET
+nmap -skip-errors $TARGET
+nmap --zero-flag $TARGET
+nmap --track-spoof $TARGET
+nmap --vulnerable-scan $TARGET
+nmap --error-forced $TARGET
+nmap -scan-debug $TARGET
+nmap --time-to-live $TARGET
+nmap --repeat-scan $TARGET
+nmap --no-prompt $TARGET
+nmap --disable-response-check $TARGET
+nmap --silent-response $TARGET
+nmap -reset-scan $TARGET
+nmap --paranoid $TARGET
+nmap -intrusion-test $TARGET
+nmap -sS $TARGET
+nmap -sT $TARGET
+nmap -sU $TARGET
+nmap -sX $TARGET
+nmap -sF $TARGET
+nmap -sN $TARGET
+nmap -O $TARGET
+nmap -A $TARGET
+nmap -p $TARGET
+nmap -p- $TARGET
+nmap -p 1-65535 $TARGET
+nmap -v $TARGET
+nmap -T4 $TARGET
+nmap -T5 $TARGET
+nmap -iL $TARGET
+nmap -iR $TARGET
+nmap -n $TARGET
+nmap -Pn $TARGET
+nmap -D $TARGET
+nmap -S $TARGET
+nmap --source-port $TARGET
+nmap --badsum $TARGET
+nmap -P0 $TARGET
+nmap -v $TARGET
+nmap --open $TARGET
+nmap --traceroute $TARGET
+nmap --reason $TARGET
+nmap -sV $TARGET
+nmap --script $TARGET
+nmap -O $TARGET
+
+7)
+nmap -p 1-65389 $TARGET
+nmap -nP -p 1-65389 $TARGET
+nmap -sS -p 1-65389 $TARGET
+nmap -sV -p 1-65389 $TARGET
+nmap --host-timeout $TARGET
+nmap --max-retries $TARGET
+nmap --max-scan-delay $TARGET
+nmap --min-rate $TARGET
+nmap -p 1-65389 $TARGET
+nmap -sS -p 1-65389 $TARGET
+nmap -nP -p 1-65389 $TARGET
+nmap -sV -p 1-65389 $TARGET
+nmap --max-rate $TARGET
+nmap --min-parallelism $TARGET
+nmap --max-parallelism $TARGET
+nmap --randomize-hosts $TARGET
+nmap --spoof-mac $TARGET
+nmap --data-length $TARGET
+nmap --disable-arp-ping $TARGET
+nmap --send-ip $TARGET
+nmap --send-eth $TARGET
+nmap --dns-servers $TARGET
+nmap --script-updatedb $TARGET
+nmap --unprivileged $TARGET
+nmap --packet-trace $TARGET
+nmap --host-timeout $TARGET
+nmap -iL <file> $TARGET
+nmap --datadir $TARGET
+nmap --reason $TARGET
+nmap -p- $TARGET
+nmap -T4 $TARGET
+nmap --exclude $TARGET
+nmap -A $TARGET
+
+nmap -sS -p 1-65389 $TARGET  
+nmap -A $TARGET  
+nmap -sU -p 1-65389 $TARGET  
+nmap -sS --badsum $TARGET  
+nmap -T5 $TARGET  
+nmap -Pn $TARGET  
+nmap -sN -p- $TARGET  
+nmap -sF -p- $TARGET  
+nmap --script=http-shellshock $TARGET  
+nmap --script=smb-brute $TARGET  
+nmap --script=ms17-010 $TARGET  
+nmap --script=rdp-vuln-ms12-020 $TARGET  
+nmap --script=ssh-brute $TARGET  
+nmap -p 80,443 --script=http-enum example.com  
+nmap --script=http-sql-injection example.com  
+nmap --script=http-xssed example.com  
+nmap -p- --script=dos $TARGET  
+nmap --min-rate 10000 $TARGET  
+nmap -A $TARGET  
+nmap -sS -p- $TARGET  
+nmap -sU -p- $TARGET  
+nmap -sS --badsum $TARGET  
+nmap -T5 $TARGET  
+nmap -Pn $TARGET  
+nmap --script=http-shellshock $TARGET  
+nmap --script=ms17-010 $TARGET  
+nmap --script=smb-brute $TARGET  
+nmap -p 80,443 --script=http-enum example.com  
+nmap --script=http-sql-injection example.com  
+nmap --script=http-xssed example.com  
+nmap -p- --script=dos $TARGET  
+nmap --min-rate 10000 $TARGET  
+nmap --script=http-sql-injection --script-args http-sql-injection.url="/login" $TARGET  
+nmap --script=http-sql-injection $TARGET  
+nmap --script=http-enum,http-sql-injection $TARGET  
+nmap -D RND:10 $TARGET  
+nmap -f $TARGET  
+nmap --spoof-mac 00:11:22:33:44:55 $TARGET  
+nmap --data-length 50 $TARGET  
+nmap -D RND:10 $TARGET  
+nmap -f $TARGET  
+nmap --spoof-mac 00:11:22:33:44:55 $TARGET  
+nmap --data-length 50 $TARGET  
+nmap -sC $TARGET  
+nmap --script=vuln $TARGET  
+nmap --script=http-sql-injection $TARGET  
+nmap -sS -p 1-65389 $TARGET  
+nmap -sU -p 1-65389 $TARGET  
+nmap -A -p- example.com  
+nmap -sS --badsum $TARGET  
+nmap -T5 $TARGET  
+nmap -Pn $TARGET  
+nmap --script=ms17-010 $TARGET  
+nmap $TARGET  
+nmap -sP 196.188.93.0/24  
+nmap -sL 196.188.93.0/24  
+nmap -sn 196.188.93.0/24  
+nmap -p 22,80,443 $TARGET  
+nmap -p- $TARGET  
+nmap -sV $TARGET  
+nmap -O $TARGET  
+nmap -sC $TARGET  
+nmap -D RND:10 $TARGET  
+nmap -f $TARGET  
+nmap -sI zombie_host $TARGET  
+nmap --spoof-mac 00:11:22:33:44:55 $TARGET  
+nmap --traceroute $TARGET  
+nmap --max-retries 1 $TARGET  
+nmap --min-rate 500 $TARGET  
+nmap --max-rtt-timeout 100ms $TARGET  
+nmap --script=vuln $TARGET  
+nmap --script=http-title $TARGET  
+nmap --script=ftp-anon $TARGET  
+nmap --script=ssl-cert $TARGET  
+nmap -sS -p 1-65389 $TARGET  
+nmap -A -p- example.com  
+nmap -sS --badsum $TARGET  
+nmap -T5 $TARGET  
+nmap --script=http-shellshock $TARGET  
+nmap --script=smb-brute $TARGET  
+nmap --script=vuln $TARGET  
+nmap --script=http-sql-injection $TARGET  
+nmap $TARGET  
+nmap -sV $TARGET  
+nmap -O $TARGET  
+nmap -D RND:10 $TARGET  
+nmap --spoof-mac 00:11:22:33:44:55 $TARGET  
+nmap --script=vuln $TARGET  
+nmap --script=http-sql-injection $TARGET  
+nmap --script=http-sql-injection $TARGET  
+nmap --script=http-enum,http-sql-injection $TARGET  
+nmap --script=http-sql-injection --script-args http-sql-injection.url="/login" $TARGET  
+nmap -A $TARGET  
+nmap -sS -p- $TARGET  
+nmap -sU -p- $TARGET  
+nmap -sS --badsum $TARGET  
+nmap -T5 $TARGET  
+nmap -Pn $TARGET  
+nmap -sS --badsum $TARGET  
+nmap -T5 $TARGET  
+nmap -Pn $TARGET  
+nmap --script=http-shellshock $TARGET  
+nmap --script=ms17-010 $TARGET  
+nmap --script=smb-brute $TARGET  
+nmap -p 80,443 --script=http-enum example.com  
+nmap --script=http-sql-injection example.com  
+nmap --script=http-xssed example.com  
+nmap -p- --script=dos $TARGET  
+nmap --min-rate 10000 $TARGET  
+nmap --reason $TARGET  
+nmap --max-retries 1 $TARGET  
+nmap --min-rate 1000 $TARGET  
+nmap --script=vuln $TARGET  
+nmap --script=ssl-heartbleed $TARGET  
+nmap --script=http-enum $TARGET  
+nmap --script=vuln $TARGET  
+nmap --script=ssl-heartbleed $TARGET  
+nmap --script=http-enum $TARGET  
+nmap --reason $TARGET  
+nmap --max-retries 1 $TARGET  
+nmap --min-rate 1000 $TARGET  
+nmap -D RND:5 $TARGET  
+nmap -f $TARGET  
+nmap -sI zombie_host $TARGET  
+nmap -p 22,80,443 $TARGET  
+nmap -p- $TARGET  
+nmap -sV $TARGET  
+nmap -sC $TARGET  
+nmap -p 22,80,443 $TARGET  
+nmap -p- $TARGET  
+nmap -sV $TARGET  
+nmap -sC $TARGET  
+nmap -sn 196.188.93.0/24  
+nmap -sL 196.188.93.0/24  
+nmap --traceroute $TARGET  
+nmap --script=http-enum,http-sql-injection $TARGET  
+nmap --script=http-sql-injection $TARGET  
