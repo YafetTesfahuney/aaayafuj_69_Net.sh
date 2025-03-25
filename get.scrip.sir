@@ -1,0 +1,101 @@
+#!/bin/bash
+
+# Colors for output
+GREEN="\e[32m"
+RED="\e[31m"
+YELLOW="\e[33m"
+RESET="\e[0m"
+
+# ASCII Banner
+echo -e "${GREEN}"
+echo "                                __        _        __   ___        _   _       _ "
+echo "  __ _  __ _  __ _ _   _  __ _ / _|_   _ (_)      / /_ / _ \      | \ | | ___ | |_"
+echo " / _` |/ _` |/ _` | | | |/ _` | |_| | | || |_____| '_ \ (_) |_____|  \| |/ _ \| __|"
+echo "| (_| | (_| | (_| | |_| | (_| |  _| |_| || |_____| (_) \__, |_____| |\  |  __/| |_"
+echo " \__,_|\__,_|\__,_|\__, |\__,_|_|  \__,_|/ |      \___/  /_/      |_| \_|\___| \__|"
+echo "This use for good"
+echo "This use for target"
+echo "This use for cybersecurity"
+echo "This use for phishing"
+echo "This use for aaayafuj"
+echo -e "${RESET}"
+sleep 2
+
+echo -e "${GREEN}[+] Starting 69phisher Installation...${RESET}"
+sleep 2
+
+# Function to check and install missing packages
+install_packages() {
+    echo -e "${YELLOW}[+] Checking required dependencies...${RESET}"
+    local packages=("git" "curl" "php" "openssh" "wget" "unzip" "python3" "python3-pip" "figlet" "lolcat")
+
+    for package in "${packages[@]}"; do
+        if ! dpkg -s "$package" &>/dev/null; then
+            echo -e "${RED}[-] $package not found. Installing...${RESET}"
+            sudo apt install -y "$package"
+        else
+            echo -e "${GREEN}[+] $package is already installed.${RESET}"
+        fi
+    done
+}
+
+# Detect OS
+detect_os() {
+    echo -e "${YELLOW}[+] Detecting OS...${RESET}"
+    if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+        echo -e "${GREEN}[+] Linux detected.${RESET}"
+    elif [[ "$OSTYPE" == "darwin"* ]]; then
+        echo -e "${GREEN}[+] macOS detected.${RESET}"
+        echo -e "${YELLOW}[+] Installing Homebrew and dependencies...${RESET}"
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        brew install git curl php python3
+    else
+        echo -e "${RED}[-] Unsupported OS detected. Exiting.${RESET}"
+        exit 1
+    fi
+}
+
+# Update system
+update_system() {
+    echo -e "${YELLOW}[+] Updating system packages...${RESET}"
+    sudo apt update -y && sudo apt upgrade -y
+}
+
+# Clone and setup 69phisher
+install_69phisher() {
+    echo -e "${YELLOW}[+] Cloning 69phisher repository...${RESET}"
+    if git clone https://github.com/Akshay-Arjun/69phisher.git; then
+        echo -e "${GREEN}[+] 69phisher cloned successfully!${RESET}"
+    else
+        echo -e "${RED}[-] Failed to clone 69phisher. Retrying...${RESET}"
+        sleep 2
+        install_69phisher
+    fi
+
+    cd 69phisher || { echo -e "${RED}[-] Failed to enter 69phisher directory! Exiting...${RESET}"; exit 1; }
+
+    echo -e "${YELLOW}[+] Setting executable permissions...${RESET}"
+    chmod 777 69phisher.sh
+
+    echo -e "${YELLOW}[+] Installing additional Python libraries...${RESET}"
+    pip3 install requests colorama rich pyfiglet
+
+    echo -e "${GREEN}[+] Running 69phisher...${RESET}"
+    bash 69phisher.sh
+}
+
+# Security warning
+security_warning() {
+    echo -e "${RED}=============================================================${RESET}"
+    echo -e "${RED}[!] WARNING: This tool is for educational and legal use only.${RESET}"
+    echo -e "${RED}[!] Unauthorized use may be illegal in your country.${RESET}"
+    echo -e "${RED}=============================================================${RESET}"
+    sleep 3
+}
+
+# Run functions
+security_warning
+detect_os
+update_system
+install_packages
+install_69phisher
