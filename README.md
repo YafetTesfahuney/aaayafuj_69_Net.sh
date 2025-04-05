@@ -70,7 +70,33 @@ If You Use This Tool for Illegal Purposes:
 *  Law enforcement agencies actively monitor unauthorized hacking activities.
 *  Cybercrime laws in most countries impose heavy fines and jail time.
 *  Using this on unauthorized systems can result in permanent bans or legal action.
+*  
+# How to use it:
+* Save it as install_aaayafuj.sh
 
+ # Make it executable:
+# Termux 🔧tool 🔨 to install 
+    ```bash
+    pkg update 
+    pkg upgrade 
+    pkg install git 
+    pkg install mtools
+    pkg install nmap 
+    git clone https://github.com/YafetTesfahuney/aaayafuj_69_Net.sh.git
+    cd aaayafuj_69_Net.sh
+    chmod +x install_aaayafuj.sh
+    ./install_aaayafuj.sh
+# Kali Linux to install this tool🔧
+    ```sudo apt update -y
+       sudo apt upgrade -y
+       sudo apt install nmap 
+       sudo apt install git 
+       sudo apt-get ngrok -y
+     $ git clone https://github.com/YafetTesfahuney/aaayafuj_69_Net.sh.git
+    $ cd aaayafuj_69_Net.sh
+    $ ./aaayafuj_69_Net.sh
+    $ bash aaayafuj_69_Net.sh
+       
 ⚠️ Warning: Ethical hacking is about learning, securing, and protecting systems, NOT breaking them. Misusing this tool may lead to prosecution under national and international cybersecurity laws such as:
 
 * Computer Fraud and Abuse Act (CFAA) - USA
