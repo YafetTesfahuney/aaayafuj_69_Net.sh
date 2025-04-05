@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "[+] Updating packages..."
+pkg update -y && pkg upgrade -y
+
+echo "[+] Installing Git and Bash..."
+pkg install git bash -y
+
+echo "[+] Cloning aaayafuj_69_Net.sh..."
+git clone https://github.com/YafetTesfahuney/aaayafuj_69_Net.sh.git
+
+cd aaayafuj_69_Net.sh || { echo "[-] Failed to enter directory."; exit 1; }
+
+echo "[+] Giving execution permission..."
+chmod +x aaayafuj_69_Net.sh
+
+echo "[+] Running the script..."
+bash aaayafuj_69_Net.sh
