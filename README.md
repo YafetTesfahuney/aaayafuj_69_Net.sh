@@ -17,11 +17,11 @@ Before you install the tools, You have to know this following.
 This script should be a legitimate cybersecurity testing framework that integrates phishing simulations, penetration testing utilities, and network security assessment tools. Here are some ideas to refine and enhance it:
 
 1️⃣ Core Functionalities
-✅ Automated OS Detection: Linux/macOS/Windows compatibility
-✅ One-Click Setup: Installs required dependencies (Git, Python, PHP, Curl, etc.)
-✅ Preconfigured Phishing Templates: For ethical security testing
-✅ System Hardening Tools: Optional security features for testing defenses
-✅ Logging & Reporting: Stores phishing test results securely
+* ✅ Automated OS Detection: Linux/macOS/Windows compatibility
+* ✅ One-Click Setup: Installs required dependencies (Git, Python, PHP, Curl, etc.)
+* ✅ Preconfigured Phishing Templates: For ethical security testing
+* ✅ System Hardening Tools: Optional security features for testing defenses
+* ✅ Logging & Reporting: Stores phishing test results securely
 
 2️⃣ Advanced Features
 # 🔹 Modular Attack Modes:
