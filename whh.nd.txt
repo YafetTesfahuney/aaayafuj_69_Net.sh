@@ -1,0 +1,58 @@
+# !/bin/bash
+
+# Ask for the IP Address to block or monitor
+read -p "Enter IP Address to block/monitor: " IP_ADDRESS
+
+# Display IP Address entered
+echo "You entered: $IP_ADDRESS"
+
+# Block incoming traffic from the IP
+echo "[+] Blocking incoming traffic from $IP_ADDRESS"
+sudo iptables -A INPUT -s $IP_ADDRESS -j DROP
+
+# Block outgoing traffic to the IP
+echo "[+] Blocking outgoing traffic to $IP_ADDRESS"
+sudo iptables -A OUTPUT -d $IP_ADDRESS -j DROP
+
+# Save iptables rules to make the block persistent
+echo "[+] Saving iptables rules..."
+sudo iptables-save > /etc/iptables/rules.v4
+
+# Block IP using UFW (Uncomplicated Firewall)
+echo "[+] Blocking IP using UFW"
+sudo ufw deny from $IP_ADDRESS
+
+# Block incoming traffic to the IP for SSH
+echo "[+] Denying SSH access for $IP_ADDRESS"
+echo "sshd: $IP_ADDRESS" | sudo tee -a /etc/hosts.deny
+
+# Check if Fail2Ban is installed, otherwise install it
+echo "[+] Installing Fail2Ban if not already installed..."
+sudo apt install fail2ban -y
+
+# Configure Fail2Ban for SSH login blocking
+echo "[+] Configuring Fail2Ban for SSH..."
+sudo nano /etc/fail2ban/jail.local
+# In jail.local, add this section (manually edit the file or use echo commands for automation):
+# [sshd]
+# enabled = true
+# filter = sshd
+# action = iptables[name=SSH, port=ssh, protocol=tcp]
+# logpath = /var/log/auth.log
+# maxretry = 3
+# bantime = -1
+
+# Restart Fail2Ban
+echo "[+] Restarting Fail2Ban..."
+sudo systemctl restart fail2ban
+
+# Capture traffic from the IP using tcpdump (monitoring purpose)
+echo "[+] Capturing traffic from IP $IP_ADDRESS"
+sudo tcpdump host $IP_ADDRESS
+
+# Mark the IP in a log for reference
+echo "[+] Adding $IP_ADDRESS to blacklist log"
+echo "$IP_ADDRESS blackhat.attacker" | sudo tee -a /etc/hosts
+
+# Notify user the script is finished
+echo "[+] Completed blocking and monitoring for IP: $IP_ADDRESS"
